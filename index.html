@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Wishlist | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="main-nav">
+            <h1>🌍 My Travel Wishlist</h1>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    
+    <main class="container">
+        
+        <section class="add-form">
+            <h2>✈️ Add New Destination</h2>
+            <div class="form-group">
+                <input type="text" id="placeName" placeholder="Place Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="countryName" placeholder="Country" required>
+            </div>
+            <div class="form-group">
+                <label>Status:</label>
+                <div>
+                    <label><input type="radio" name="status" value="want" checked> Want to Visit</label>
+                    <label><input type="radio" name="status" value="visited"> Visited</label>
+                </div>
+            </div>
+            <button class="btn" onclick="addDestination()">Add to List</button>
+        </section>
+
+        
+        <section class="filters">
+            <h2>🔍 Find Destinations</h2>
+            <div class="filter-controls">
+                <input type="text" id="searchBox" placeholder="Search..." onkeyup="filterDestinations()">
+                <select id="statusFilter" onchange="filterDestinations()">
+                    <option value="all">All</option>
+                    <option value="want">Want to Visit</option>
+                    <option value="visited">Visited</option>
+                </select>
+            </div>
+        </section>
+
+        
+        <section class="destinations">
+            <h2>📌 My Destinations</h2>
+            <div id="destinationsList">
+            
+                <p class="empty-message">No destinations yet. Add your first one!</p>
+            </div>
+        </section>
+
+        
+        <section class="stats">
+            <h2>📊 Statistics</h2>
+            <div class="stats-box">
+                <div class="stat">
+                    <h3>Total</h3>
+                    <p id="totalCount">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Want to Visit</h3>
+                    <p id="wantCount">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Visited</h3>
+                    <p id="visitedCount">0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>Travel Wishlist Project &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
