@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Wishlist | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <h1>🌍 My Travel Wishlist</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Contact Form</h2>
+            <p>Send me a message or suggest a destination!</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="userName">Your Name *</label>
+                    <input type="text" id="userName" required>
+                    <p class="error" id="nameError"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userEmail">Your Email *</label>
+                    <input type="email" id="userEmail" required>
+                    <p class="error" id="emailError"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userMessage">Message *</label>
+                    <textarea id="userMessage" rows="4" required></textarea>
+                    <p class="error" id="messageError"></p>
+                </div>
+                
+                <button type="button" class="btn" onclick="submitForm()">Send Message</button>
+                <p id="formResult"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Travel Wishlist Project &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
